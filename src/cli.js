@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
-const {question} = readlineSync;
 
-const logic = function () {
+const { question } = readlineSync;
+
+// eslint-disable-next-line func-names
+const sayName = function () {
   const userName = question('May I have your name?');
   console.log(`Hello, ${userName}`);
 };
-
-export default logic;
+export default sayName;
