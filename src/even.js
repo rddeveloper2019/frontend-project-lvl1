@@ -1,7 +1,10 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable func-names */
 import readlineSync from 'readline-sync';
 
-import { randomNumAndAnswer, checkAnswer, findName } from './index.js';
+import {
+  randomNumAndAnswer, checkAnswer, findName, exitFromGame,
+} from './index.js';
 
 const { question } = readlineSync;
 
@@ -12,6 +15,8 @@ const isEvenGame = function (user) {
   const giveQuestion = function () {
     if (wins === 3) {
       console.log(`Congratulations, ${userName}`);
+      wins = 0;
+      exitFromGame(userName);
       return;
     }
 

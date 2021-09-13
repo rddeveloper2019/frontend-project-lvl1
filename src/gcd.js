@@ -2,17 +2,19 @@
 /* eslint-disable func-names */
 import readlineSync from 'readline-sync';
 
+// eslint-disable-next-line import/no-unresolved
 import {
-  randomExpAndAnswer, checkAnswer, findName, exitFromGame,
+  randomGCDAndAnswer, checkAnswer, findName, exitFromGame,
 } from './index.js';
 
 const { question } = readlineSync;
 
-const expResult = function (user) {
+const greatestComDiv = function (user) {
   const userName = user || findName();
 
-  console.log('What is the result of the expression?');
+  console.log('Find the greatest common divisor of given numbers.');
   let wins = 0;
+
   const giveQuestion = function () {
     if (wins === 3) {
       console.log(`Congratulations, ${userName}`);
@@ -22,7 +24,8 @@ const expResult = function (user) {
     }
 
     wins += 1;
-    const [randomExp, correctAnswer] = randomExpAndAnswer();
+
+    const [randomExp, correctAnswer] = randomGCDAndAnswer();
     const userSays = question(`Question: ${randomExp} `)
       .toLowerCase()
       .trim();
@@ -32,4 +35,4 @@ const expResult = function (user) {
 
   giveQuestion();
 };
-export default expResult;
+export default greatestComDiv;
