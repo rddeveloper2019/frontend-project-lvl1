@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 
 const { question } = readlineSync;
 
-let userName = '';
+// const userName = '';
 let wins = 0;
 
 const generateRandomNumAndCorrectAnswer = function () {
@@ -12,9 +12,9 @@ const generateRandomNumAndCorrectAnswer = function () {
   return [num, correct];
 };
 
-const isEvenGame = function () {
-  userName = question('May I have your name? ');
-  console.log(`Hello, ${userName}`);
+const isEvenGame = function (userName) {
+  // userName = question('May I have your name? ');
+  // console.log(`Hello, ${userName}`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   const giveNum = function () {
@@ -29,13 +29,13 @@ const isEvenGame = function () {
     const userSays = question(`Question: ${randomNum} `)
       .toLowerCase()
       .trim();
-    const validated = userSays === 'yes' || userSays === 'no';
+    // const validated = userSays === 'yes' || userSays === 'no';
 
-    if (!validated) {
-      console.log('Your answer is not valid! Write "yes" or "no"!');
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
+    // if (!validated) {
+    //   console.log('Your answer is not valid! Write "yes" or "no"!');
+    //   console.log(`Let's try again, ${userName}!`);
+    //   return;
+    // }
 
     console.log(`Your answer: ${userSays}`);
 
