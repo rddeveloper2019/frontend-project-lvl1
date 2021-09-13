@@ -8,7 +8,7 @@ const { question } = readlineSync;
 // eslint-disable-next-line func-names
 const start = function () {
   const userName = findName();
-  // console.log(`Hello, ${userName}`);
+
   const userChoice = question(
     `Choose a game:
     1-is even?

@@ -32,7 +32,7 @@ const checkAnswer = (userAnswer, correctAnswer, nextStage, userName) => {
     console.log(`Let's try again, ${userName}!`);
   }
 };
-const findName = function () {
+const findName = () => {
   const userName = question('May I have your name? ');
   console.log(`Hello, ${userName}`);
   return userName;

@@ -15,7 +15,6 @@ const expResult = function (user) {
       console.log(`Congratulations, ${userName}`);
       return;
     }
-    console.log(wins);
 
     wins += 1;
 
