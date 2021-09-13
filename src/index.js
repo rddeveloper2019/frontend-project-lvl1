@@ -8,16 +8,20 @@ import readlineSync from 'readline-sync';
 import isEvenGame from './even.js';
 import expResult from './calc.js';
 import greatestComDiv from './gcd.js';
+import progression from './progression.js';
 
 const { question } = readlineSync;
 
 export const userChoice = (name) => {
   const choosed = question(
     `Choose a game:
-    1-Is the number even;
-    2-Find the result of an expression;
-    3-Greatest common divisor;
-    5-exit 
+    1 -> Checking an even number;
+    2 -> Calculator;
+    3 -> Greatest common divisor;
+    4 -> Arithmetic progression
+    *** 
+    5-> =Exit=
+    
     Your choice is - `,
   );
 
@@ -29,7 +33,7 @@ export const userChoice = (name) => {
     return;
   }
 
-  const games = [isEvenGame, expResult, greatestComDiv];
+  const games = [isEvenGame, expResult, greatestComDiv, progression];
 
   // eslint-disable-next-line consistent-return
   games[+choosed - 1](name);
@@ -106,4 +110,18 @@ export const findName = () => {
   const userName = question('May I have your name? ');
   console.log(`Hello, ${userName}`);
   return userName;
+};
+export const missingInProgression = () => {
+  const add = randomNumAndAnswer(1, 25)[0];
+  const startNum = randomNumAndAnswer(1, 10)[0];
+  const randomIdx = randomNumAndAnswer(0, 10)[0];
+
+  const arr = [startNum];
+  for (let i = 1; i < 10; i += 1) {
+    arr.push(arr[i - 1] + add);
+  }
+  const answer = arr[randomIdx];
+  arr[randomIdx] = '<>';
+
+  return [arr, answer];
 };
