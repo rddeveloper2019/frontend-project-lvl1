@@ -1,24 +1,26 @@
 /* eslint-disable func-names */
 import readlineSync from 'readline-sync';
 
-import { randomNumAndAnswer, checkAnswer, findName } from './index.js';
+import { randomExpAndAnswer, checkAnswer, findName } from './index.js';
 
 const { question } = readlineSync;
 
-const isEvenGame = function (user) {
+const expResult = function (user) {
   const userName = user || findName();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
+  console.log('What is the result of the expression?');
   let wins = 0;
   const giveQuestion = function () {
     if (wins === 3) {
       console.log(`Congratulations, ${userName}`);
       return;
     }
+    console.log(wins);
 
     wins += 1;
 
-    const [randomNum, correctAnswer] = randomNumAndAnswer(10, 20);
-    const userSays = question(`Question: ${randomNum} `)
+    const [randomExp, correctAnswer] = randomExpAndAnswer();
+    const userSays = question(`Question: ${randomExp} `)
       .toLowerCase()
       .trim();
 
@@ -27,4 +29,4 @@ const isEvenGame = function (user) {
 
   giveQuestion();
 };
-export default isEvenGame;
+export default expResult;

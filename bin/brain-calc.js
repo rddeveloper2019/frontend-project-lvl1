@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-
-import start from '../src/cli.js';
+import expResult from '../src/calc.js';
 
 console.log('Welcome to the Brain Games!');
 
-start();
+expResult();
