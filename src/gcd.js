@@ -17,7 +17,7 @@ const greatestComDiv = function (user) {
 
   const giveQuestion = function () {
     if (wins === 3) {
-      console.log(`Congratulations, ${userName}`);
+      console.log(`Congratulations, ${userName}!`);
       wins = 0;
 
       return;
