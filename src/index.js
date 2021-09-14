@@ -77,9 +77,9 @@ export const missingInProgression = () => {
     arr.push(arr[i - 1] + add);
   }
   const answer = arr[randomIdx];
-  arr[randomIdx] = '<>';
+  arr[randomIdx] = '..';
 
-  return [arr, answer];
+  return [arr.join(' '), answer];
 };
 
 export const isPrime = () => {
