@@ -5,56 +5,8 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable import/no-cycle */
 import readlineSync from 'readline-sync';
-import isEvenGame from './even.js';
-import expResult from './calc.js';
-import greatestComDiv from './gcd.js';
-import progression from './progression.js';
-import primeNum from './prime.js';
 
 const { question } = readlineSync;
-
-export const userChoice = (name) => {
-  const choosed = question(
-    `Choose a game:
-    1 -> Checking an even number
-    2 -> Calculator
-    3 -> Greatest common divisor
-    4 -> Arithmetic progression
-    5 -> Prime number
-    *** 
-    6-> =Exit=
-    
-    Your choice is - `,
-  );
-
-  const answers = [1, 2, 3, 4, 5, 6];
-
-  if (choosed === '6' || answers.indexOf(+choosed) < 0) {
-    console.log(`Goodbye, ${name}!`);
-    // eslint-disable-next-line no-useless-return
-    return;
-  }
-
-  const games = [isEvenGame, expResult, greatestComDiv, progression, primeNum];
-
-  // eslint-disable-next-line consistent-return
-  games[+choosed - 1](name);
-};
-
-export const exitFromGame = (name) => {
-  const selectAnswer = question(
-    `Let's play some more?:
-    1-Yes, play again;
-    2-No, exit game;
-    Your choice is: `,
-  );
-  if (selectAnswer === 'no' || selectAnswer === '2') {
-    console.log(`Goodbye, ${name}!`);
-    // eslint-disable-next-line no-useless-return
-    return;
-  }
-  userChoice(name);
-};
 
 const randomNum = (min, max) => Math.floor(Math.random() * max + min);
 
@@ -96,7 +48,7 @@ export const randomGCDAndAnswer = () => {
 };
 
 export const checkAnswer = (userAnswer, correctAnswer, nextStage, userName) => {
-  console.log(`Your answer is: ${userAnswer}`);
+  console.log(`Your answer: ${userAnswer}`);
   const answerStr = correctAnswer.toString();
   if (answerStr === userAnswer) {
     console.log('Correct!');
@@ -108,7 +60,6 @@ export const checkAnswer = (userAnswer, correctAnswer, nextStage, userName) => {
       `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
     );
     console.log(`Let's try again, ${userName}!`);
-    exitFromGame(userName);
   }
 };
 export const findName = () => {

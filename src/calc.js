@@ -3,7 +3,7 @@
 import readlineSync from 'readline-sync';
 
 import {
-  randomExpAndAnswer, checkAnswer, findName, exitFromGame,
+  randomExpAndAnswer, checkAnswer, findName,
 } from './index.js';
 
 const { question } = readlineSync;
@@ -17,7 +17,6 @@ const expResult = function (user) {
     if (wins === 3) {
       console.log(`Congratulations, ${userName}`);
       wins = 0;
-      exitFromGame(userName);
       return;
     }
 

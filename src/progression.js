@@ -4,7 +4,7 @@ import readlineSync from 'readline-sync';
 
 // eslint-disable-next-line import/no-unresolved
 import {
-  missingInProgression, checkAnswer, findName, exitFromGame,
+  missingInProgression, checkAnswer, findName,
 } from './index.js';
 
 const { question } = readlineSync;
@@ -19,7 +19,6 @@ const progression = function (user) {
     if (wins === 3) {
       console.log(`Congratulations, ${userName}`);
       wins = 0;
-      exitFromGame(userName);
       return;
     }
 
