@@ -1,37 +1,45 @@
-/* eslint-disable import/no-cycle */
-/* eslint-disable func-names */
-import readlineSync from 'readline-sync';
+import findName from './services/findName.js';
+import randomNum from './services/randomNum.js';
+import checkAnswer from './services/checkAnswer.js';
+import giveQuestion from './services/giveQuestion.js';
+import countWins from './services/countWins.js';
+import congratulations from './services/congratulations.js';
 
-// eslint-disable-next-line import/no-unresolved
-import {
-  missingInProgression, checkAnswer, findName,
-} from './index.js';
+const userName = findName();
 
-const { question } = readlineSync;
+const missingInProgression = () => {
+  const add = randomNum(1, 25);
+  const startNum = randomNum(1, 10);
+  const randomIdx = randomNum(0, 10);
 
-const progression = function (user) {
-  const userName = user || findName();
+  const arr = [startNum];
+  for (let i = 1; i < 10; i += 1) {
+    arr.push(arr[i - 1] + add);
+  }
+  const answer = arr[randomIdx];
+  arr[randomIdx] = '..';
 
-  console.log('What number is missing in the progression?');
-  let wins = 0;
-
-  const giveQuestion = function () {
-    if (wins === 3) {
-      console.log(`Congratulations, ${userName}!`);
-      wins = 0;
-      return;
-    }
-
-    wins += 1;
-
-    const [arr, correctAnswer] = missingInProgression();
-    const userSays = question(`Question: ${arr}  :`)
-      .toLowerCase()
-      .trim();
-
-    checkAnswer(userSays, correctAnswer, giveQuestion, userName);
-  };
-
-  giveQuestion();
+  return [arr.join(' '), answer];
 };
+
+const progression = () => {
+  console.log('What number is missing in the progression?');
+  let wins = countWins(0);
+  const play = () => {
+    const [exp, correctAnswer] = missingInProgression();
+    const userSays = giveQuestion(userName, exp, wins);
+    const result = checkAnswer(userSays, correctAnswer, userName);
+
+    if (result === 'correct') {
+      wins = countWins(1);
+      if (wins < 3) {
+        play();
+      } else {
+        congratulations(userName);
+      }
+    }
+  };
+  play();
+};
+
 export default progression;

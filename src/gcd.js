@@ -1,38 +1,46 @@
-/* eslint-disable import/no-cycle */
-/* eslint-disable func-names */
-import readlineSync from 'readline-sync';
+import findName from './services/findName.js';
+import randomNum from './services/randomNum.js';
+import checkAnswer from './services/checkAnswer.js';
+import giveQuestion from './services/giveQuestion.js';
+import countWins from './services/countWins.js';
+import congratulations from './services/congratulations.js';
 
-// eslint-disable-next-line import/no-unresolved
-import {
-  randomGCDAndAnswer, checkAnswer, findName,
-} from './index.js';
+const userName = findName();
 
-const { question } = readlineSync;
-
-const greatestComDiv = function (user) {
-  const userName = user || findName();
-
-  console.log('Find the greatest common divisor of given numbers.');
-  let wins = 0;
-
-  const giveQuestion = function () {
-    if (wins === 3) {
-      console.log(`Congratulations, ${userName}!`);
-      wins = 0;
-
-      return;
-    }
-
-    wins += 1;
-
-    const [randomExp, correctAnswer] = randomGCDAndAnswer();
-    const userSays = question(`Question: ${randomExp} `)
-      .toLowerCase()
-      .trim();
-
-    checkAnswer(userSays, correctAnswer, giveQuestion, userName);
-  };
-
-  giveQuestion();
+const gcd = (a, b) => {
+  if (b === 0) {
+    return a;
+  }
+  return gcd(b, a % b);
 };
+
+const randomGCDAndAnswer = () => {
+  const num1 = randomNum(10, 50);
+  const num2 = randomNum(1, 20);
+  const expressions = `${num1} ${num2}`;
+  const correct = gcd(num1, num2);
+
+  return [expressions, correct];
+};
+
+const greatestComDiv = () => {
+  console.log('Find the greatest common divisor of given numbers.');
+  let wins = countWins(0);
+  const play = () => {
+    const [exp, correctAnswer] = randomGCDAndAnswer();
+    const userSays = giveQuestion(userName, exp, wins);
+    const result = checkAnswer(userSays, correctAnswer, userName);
+
+    if (result === 'correct') {
+      wins = countWins(1);
+      if (wins < 3) {
+        play();
+      } else {
+        congratulations(userName);
+      }
+    }
+  };
+  play();
+};
+
 export default greatestComDiv;

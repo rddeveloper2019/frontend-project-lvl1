@@ -1,34 +1,40 @@
-/* eslint-disable import/no-cycle */
-/* eslint-disable func-names */
-import readlineSync from 'readline-sync';
+import findName from './services/findName.js';
+import randomNum from './services/randomNum.js';
+import checkAnswer from './services/checkAnswer.js';
+import giveQuestion from './services/giveQuestion.js';
+import countWins from './services/countWins.js';
+import congratulations from './services/congratulations.js';
 
-import {
-  randomExpAndAnswer, checkAnswer, findName,
-} from './index.js';
+const userName = findName();
 
-const { question } = readlineSync;
+const randomExpAndAnswer = () => {
+  const num1 = randomNum(10, 20);
+  const num2 = randomNum(1, 10);
+  const expressions = [`${num1} + ${num2}`, `${num1} - ${num2}`, `${num1} * ${num2}`];
+  const correct = [num1 + num2, num1 - num2, num1 * num2];
+  const random = Math.floor(Math.random() * expressions.length);
 
-const expResult = function (user) {
-  const userName = user || findName();
-
-  console.log('What is the result of the expression?');
-  let wins = 0;
-  const giveQuestion = function () {
-    if (wins === 3) {
-      console.log(`Congratulations, ${userName}!`);
-      wins = 0;
-      return;
-    }
-
-    wins += 1;
-    const [randomExp, correctAnswer] = randomExpAndAnswer();
-    const userSays = question(`Question: ${randomExp} `)
-      .toLowerCase()
-      .trim();
-
-    checkAnswer(userSays, correctAnswer, giveQuestion, userName);
-  };
-
-  giveQuestion();
+  return [expressions[random], correct[random]];
 };
-export default expResult;
+
+const calcGame = () => {
+  console.log('What is the result of the expression?');
+  let wins = countWins(0);
+  const play = () => {
+    const [exp, correctAnswer] = randomExpAndAnswer(10, 20);
+    const userSays = giveQuestion(userName, exp, wins);
+    const result = checkAnswer(userSays, correctAnswer, userName);
+
+    if (result === 'correct') {
+      wins = countWins(1);
+      if (wins < 3) {
+        play();
+      } else {
+        congratulations(userName);
+      }
+    }
+  };
+  play();
+};
+
+export default calcGame;

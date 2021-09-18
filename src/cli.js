@@ -1,9 +1,6 @@
-import { findName } from './index.js';
+import findName from './services/findName.js';
 
-// eslint-disable-next-line func-names
-const start = function () {
+function start() {
   findName();
-};
+}
 export default start;
-
-// test-1
