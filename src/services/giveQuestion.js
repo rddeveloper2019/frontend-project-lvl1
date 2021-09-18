@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const { question } = readlineSync;
 
-const giveQuestion = (userName, exp) => {
+const giveQuestion = (exp) => {
   const userSays = question(`Question: ${exp} `)
     .toLowerCase()
     .trim();

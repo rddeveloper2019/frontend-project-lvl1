@@ -29,7 +29,7 @@ const primeNum = () => {
   let wins = countWins(0);
   const play = () => {
     const [exp, correctAnswer] = isPrime();
-    const userSays = giveQuestion(userName, exp, wins);
+    const userSays = giveQuestion(exp);
     const result = checkAnswer(userSays, correctAnswer, userName);
 
     if (result === 'correct') {

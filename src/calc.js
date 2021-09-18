@@ -22,7 +22,7 @@ const calcGame = () => {
   let wins = countWins(0);
   const play = () => {
     const [exp, correctAnswer] = randomExpAndAnswer(10, 20);
-    const userSays = giveQuestion(userName, exp, wins);
+    const userSays = giveQuestion(exp);
     const result = checkAnswer(userSays, correctAnswer, userName);
 
     if (result === 'correct') {

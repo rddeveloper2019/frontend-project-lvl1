@@ -18,7 +18,7 @@ const isEvenGame = () => {
   let wins = countWins(0);
   const play = () => {
     const [exp, correctAnswer] = randomNumAndAnswer(10, 20);
-    const userSays = giveQuestion(userName, exp, wins);
+    const userSays = giveQuestion(exp);
     const result = checkAnswer(userSays, correctAnswer, userName);
 
     if (result === 'correct') {

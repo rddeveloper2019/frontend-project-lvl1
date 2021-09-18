@@ -28,7 +28,7 @@ const greatestComDiv = () => {
   let wins = countWins(0);
   const play = () => {
     const [exp, correctAnswer] = randomGCDAndAnswer();
-    const userSays = giveQuestion(userName, exp, wins);
+    const userSays = giveQuestion(exp);
     const result = checkAnswer(userSays, correctAnswer, userName);
 
     if (result === 'correct') {
