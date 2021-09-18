@@ -1,5 +1,3 @@
-// import findName from './services/findName.js';
-// import randomNum from './services/randomNum.js';
 import checkAnswer from './services/checkAnswer.js';
 import giveQuestion from './services/giveQuestion.js';
 import countWins from './services/countWins.js';
