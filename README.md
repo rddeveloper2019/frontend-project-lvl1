@@ -4,4 +4,5 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-[![asciicast](https://asciinema.org/a/4bsn6aSqsv5LvXTXazKmA4Jlm.svg)](https://asciinema.org/a/4bsn6aSqsv5LvXTXazKmA4Jlm)
+
+[![asciicast](https://asciinema.org/a/Ot1bz0HTpCzl7dAWZdE4XIwfM.svg)](https://asciinema.org/a/Ot1bz0HTpCzl7dAWZdE4XIwfM)
