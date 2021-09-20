@@ -1,9 +1,6 @@
-import findName from './services/findName.js';
-import randomNum from './services/randomNum.js';
+import randomNum from '../services/randomNum.js';
 
-import game from './index.js';
-
-const userName = findName();
+import game from '../index.js';
 
 const gcd = (a, b) => {
   if (b === 0) {
@@ -20,9 +17,10 @@ const randomGCDAndAnswer = () => {
 
   return [expressions, correct];
 };
+
 const descr = 'Find the greatest common divisor of given numbers.';
 const greatestComDiv = () => {
-  game(descr, userName, randomGCDAndAnswer);
+  game(descr, randomGCDAndAnswer);
 };
 
 export default greatestComDiv;

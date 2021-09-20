@@ -1,26 +1,36 @@
-import checkAnswer from './services/checkAnswer.js';
-import giveQuestion from './services/giveQuestion.js';
-import countWins from './services/countWins.js';
-import congratulations from './services/congratulations.js';
+import readlineSync from 'readline-sync';
 
-const game = (descr, userName, func) => {
+const { question } = readlineSync;
+
+const game = (descr, func) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = question('May I have your name? ');
+  console.log(`Hello, ${userName}`);
   console.log(descr);
 
-  let wins = countWins(0);
+  let gameLevels = 3;
+
   const play = () => {
     const [exp, correctAnswer] = func();
-    const userSays = giveQuestion(exp);
-    const result = checkAnswer(userSays, correctAnswer, userName);
+    const userSays = question(`Question: ${exp} `)
+      .toLowerCase()
+      .trim();
 
-    if (result === 'correct') {
-      wins = countWins(1);
-      if (wins < 3) {
-        play();
-      } else {
-        congratulations(userName);
-      }
+    if (userSays === correctAnswer.toString()) {
+      console.log(`Congratulations, ${userName}!`);
+      gameLevels -= 1;
+    } else {
+      console.log(
+        `'${userSays}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
+      );
+      console.log(`Let's try again, ${userName}!`);
+      gameLevels = 0;
     }
   };
-  play();
+
+  while (gameLevels) {
+    play();
+  }
 };
+
 export default game;

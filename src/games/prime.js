@@ -1,8 +1,5 @@
-import findName from './services/findName.js';
-import randomNum from './services/randomNum.js';
-import game from './index.js';
-
-const userName = findName();
+import randomNum from '../services/randomNum.js';
+import game from '../index.js';
 
 const isPrime = () => {
   const random = randomNum(1, 100);
@@ -22,7 +19,7 @@ const isPrime = () => {
 };
 const descr = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const primeNum = () => {
-  game(descr, userName, isPrime);
+  game(descr, isPrime);
 };
 
 export default primeNum;

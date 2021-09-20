@@ -1,6 +1,10 @@
-import findName from './services/findName.js';
+import readlineSync from 'readline-sync';
 
-function start() {
-  findName();
-}
-export default start;
+const { question } = readlineSync;
+
+const intro = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+};
+export default intro;

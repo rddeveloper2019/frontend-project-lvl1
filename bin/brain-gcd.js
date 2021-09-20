@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import greatestComDiv from '../src/gcd.js';
+import greatestComDiv from '../src/games/gcd.js';
 
 greatestComDiv();
