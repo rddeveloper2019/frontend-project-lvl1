@@ -45,7 +45,7 @@
  - Прогрессия `brain-progression`:
 
 [![asciicast](https://asciinema.org/a/jm3Z0VrMMgkvZAH4eR71kc8Ga.svg)](https://asciinema.org/a/jm3Z0VrMMgkvZAH4eR71kc8Ga)
-https://asciinema.org/a/jm3Z0VrMMgkvZAH4eR71kc8Ga
+
 
  - Определение четного числа `brain-even`:
 
