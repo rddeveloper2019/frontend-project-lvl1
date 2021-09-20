@@ -2,6 +2,8 @@ import randomNum from '../services/randomNum.js';
 
 import game from '../index.js';
 
+const descr = 'What number is missing in the progression?';
+
 const generateArray = (start, interval, randomIdx) => {
   const arr = [start];
   for (let i = 1; i < 10; i += 1) {
@@ -20,7 +22,6 @@ const missingInProgression = () => {
   return generateArray(startNum, interval, randomIdx);
 };
 
-const descr = 'What number is missing in the progression?';
 const progression = () => {
   game(descr, missingInProgression);
 };

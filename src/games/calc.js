@@ -2,6 +2,8 @@ import randomNum from '../services/randomNum.js';
 
 import game from '../index.js';
 
+const descr = 'What is the result of the expression?';
+
 const generateExpAndResult = (int1, int2, operator) => {
   const dic = {
     '+': int1 + int2,
@@ -23,7 +25,6 @@ const randomExpAndAnswer = () => {
   return [expression, correct];
 };
 
-const descr = 'What is the result of the expression?';
 const calcGame = () => {
   game(descr, randomExpAndAnswer);
 };
