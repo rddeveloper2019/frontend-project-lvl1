@@ -1,25 +1,25 @@
 import randomNum from '../services/randomNum.js';
 import game from '../index.js';
 
-const descr = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const checkPrime = (num) => {
+const isPrime = (num) => {
   for (let i = num - 1; i > 1; i -= 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
-const isPrime = () => {
-  const random = randomNum(1, 100);
-  const correct = checkPrime(random);
-  return [random, correct];
+const getGameConditions = () => {
+  const askedNum = randomNum(1, 100);
+  const correctAnswer = isPrime(askedNum) ? 'yes' : 'no';
+  return [askedNum, correctAnswer];
 };
 
-const primeNum = () => {
-  game(descr, isPrime);
+const isPrimeGame = () => {
+  game(gameDescription, getGameConditions);
 };
 
-export default primeNum;
+export default isPrimeGame;

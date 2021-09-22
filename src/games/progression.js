@@ -2,28 +2,28 @@ import randomNum from '../services/randomNum.js';
 
 import game from '../index.js';
 
-const descr = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
 
-const generateArray = (start, interval, randomIdx) => {
+const generateArray = (start, interval) => {
   const arr = [start];
   for (let i = 1; i < 10; i += 1) {
     arr.push(arr[i - 1] + interval);
   }
-  const answer = arr[randomIdx];
-  arr[randomIdx] = '..';
-  return [arr.join(' '), answer];
+  return arr;
 };
 
-const missingInProgression = () => {
-  const interval = randomNum(1, 25);
-  const startNum = randomNum(1, 10);
+const getGameConditions = () => {
   const randomIdx = randomNum(0, 10);
+  const randomArray = generateArray(randomNum(1, 10), randomNum(1, 25));
+  const correctAnswer = randomArray[randomIdx];
+  randomArray[randomIdx] = '..';
 
-  return generateArray(startNum, interval, randomIdx);
+  const question = randomArray.join(' ');
+  return [question, correctAnswer];
 };
 
-const progression = () => {
-  game(descr, missingInProgression);
+const progressionGame = () => {
+  game(gameDescription, getGameConditions);
 };
 
-export default progression;
+export default progressionGame;
