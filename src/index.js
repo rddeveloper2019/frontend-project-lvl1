@@ -11,7 +11,10 @@ const game = (gameCondition, gameFunction) => {
     const usersAnswer = question(`Question: ${expression} `);
 
     if (usersAnswer === correctAnswer.toString()) {
-      console.log(`Congratulations, ${userName}!`);
+      console.log('Correct!');
+      if (i === 1) {
+        console.log(`Congratulations, ${userName}!`);
+      }
     } else {
       console.log(
         `'${usersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,

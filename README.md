@@ -1,6 +1,6 @@
 [![hexlet-check](https://github.com/rddeveloper2019/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/rddeveloper2019/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/0a641c1278050171e65d/maintainability)](https://codeclimate.com/github/rddeveloper2019/frontend-project-lvl1/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0a641c1278050171e65d/maintainability)](https://codeclimate.com/github/rddeveloper2019/frontend-project-lvl1)
 
 (с) по материалам [Онлайн-школы программирования «Хекслет»](https://ru.hexlet.io/)
 
