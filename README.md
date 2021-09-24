@@ -25,7 +25,6 @@
  - Определение простого числа. (*brain-prime*)
 
 
-
 ### Установка (требуется наличие Node.js, NPM, Git):
 
 [![asciicast](https://asciinema.org/a/RdIVy7EHmswEVGSIddDXrN5un.svg)](https://asciinema.org/a/RdIVy7EHmswEVGSIddDXrN5un)
