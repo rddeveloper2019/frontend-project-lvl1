@@ -1,11 +1,11 @@
 [![hexlet-check](https://github.com/rddeveloper2019/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/rddeveloper2019/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0a641c1278050171e65d/maintainability)](https://codeclimate.com/github/rddeveloper2019/frontend-project-lvl1/maintainability)
 
 (с) по материалам [Онлайн-школы программирования «Хекслет»](https://ru.hexlet.io/)
 
 
-[![](https://github.com/rddeveloper2019/rddeveloper2019.github.io/blob/main/brain-games.jpg?raw=true)
+[!](https://github.com/rddeveloper2019/rddeveloper2019.github.io/blob/main/brain-games.jpg?raw=true)
 ### Консольное приложение «Игры разума» (Brain games)
 ##### Набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. 
 
