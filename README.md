@@ -2,6 +2,7 @@
 
 (с) по материалам [Онлайн-школы программирования «Хекслет»](https://ru.hexlet.io/)
 
+![](https://github.com/rddeveloper2019/rddeveloper2019.github.io/blob/main/brain-games.jpg?raw=true)
 
 (https://github.com/rddeveloper2019/rddeveloper2019.github.io/blob/main/brain-games.jpg?raw=true)
 ### Консольное приложение «Игры разума» (Brain games)
