@@ -9,6 +9,7 @@ const game = (gameCondition, gameFunction) => {
   for (let i = 3; i > 0; i -= 1) {
     const [expression, correctAnswer] = gameFunction();
     const usersAnswer = question(`Question: ${expression} `);
+    console.log(`Your answer: ${usersAnswer}`);
 
     if (usersAnswer === correctAnswer.toString()) {
       console.log('Correct!');

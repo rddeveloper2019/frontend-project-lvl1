@@ -1,6 +1,4 @@
-[![hexlet-check](https://github.com/rddeveloper2019/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/rddeveloper2019/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/0a641c1278050171e65d/maintainability)](https://codeclimate.com/github/rddeveloper2019/frontend-project-lvl1)
+[![hexlet-check](https://github.com/rddeveloper2019/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/rddeveloper2019/frontend-project-lvl1/actions/workflows/hexlet-check.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/0a641c1278050171e65d/maintainability)](https://codeclimate.com/github/rddeveloper2019/frontend-project-lvl1)
 
 (с) по материалам [Онлайн-школы программирования «Хекслет»](https://ru.hexlet.io/)
 
@@ -40,22 +38,22 @@
 
  - Калькулятор  `brain-calc`:
 
-[![asciicast](https://asciinema.org/a/TeUoGKbEgS8HtGaDAFk4aFS5s.svg)](https://asciinema.org/a/TeUoGKbEgS8HtGaDAFk4aFS5s)
+[![asciicast](https://asciinema.org/a/2v9IZdG9DitEijGIfvkb2nrkE.svg)](https://asciinema.org/a/2v9IZdG9DitEijGIfvkb2nrkE)
 
  - Прогрессия `brain-progression`:
 
-[![asciicast](https://asciinema.org/a/jm3Z0VrMMgkvZAH4eR71kc8Ga.svg)](https://asciinema.org/a/jm3Z0VrMMgkvZAH4eR71kc8Ga)
+[![asciicast](https://asciinema.org/a/lJ0KW5Hjr4C4LDCDk85LxxJDM.svg)](https://asciinema.org/a/lJ0KW5Hjr4C4LDCDk85LxxJDM)
 
 
  - Определение четного числа `brain-even`:
 
-[![asciicast](https://asciinema.org/a/cFANUAUDaxjgvJNZvJG89xbtp.svg)](https://asciinema.org/a/cFANUAUDaxjgvJNZvJG89xbtp)
+[![asciicast](https://asciinema.org/a/qXgTcSuJcJTc4pnn2CBn6aaND.svg)](https://asciinema.org/a/qXgTcSuJcJTc4pnn2CBn6aaND)
 
  - Определение наибольшего общего делителя `brain-gcd`:
 
-[![asciicast](https://asciinema.org/a/bBIqd0II80hyJWpocUTXPPTPC.svg)](https://asciinema.org/a/bBIqd0II80hyJWpocUTXPPTPC)
+[![asciicast](https://asciinema.org/a/S26xpqvO5Jj8hxKZspoFlFKPM.svg)](https://asciinema.org/a/S26xpqvO5Jj8hxKZspoFlFKPM)
 
  - Определение простого числа `brain-prime`:
 
-[![asciicast](https://asciinema.org/a/29SIcJvIWrFykAxmSKJqxc1Yi.svg)](https://asciinema.org/a/29SIcJvIWrFykAxmSKJqxc1Yi)
+[![asciicast](https://asciinema.org/a/hdvOYJWf5VCSGKoc9WkQ3NBcp.svg)](https://asciinema.org/a/hdvOYJWf5VCSGKoc9WkQ3NBcp)
 
