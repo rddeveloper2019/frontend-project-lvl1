@@ -4,21 +4,22 @@ import game from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const generateArray = (start, interval) => {
-  const arr = [start];
-  for (let i = 1; i < 10; i += 1) {
-    arr.push(arr[i - 1] + interval);
+const getProgression = (start, interval, length) => {
+  const arr = [];
+  for (let i = 0; i <= length; i += 1) {
+    arr.push(start + interval * i);
   }
   return arr;
 };
 
 const getGameConditions = () => {
-  const randomIdx = randomNum(0, 10);
-  const randomArray = generateArray(randomNum(1, 10), randomNum(1, 25));
-  const correctAnswer = randomArray[randomIdx];
-  randomArray[randomIdx] = '..';
+  const lengthOfProgression = randomNum(6, 9);
+  const progression = getProgression(randomNum(1, 10), randomNum(1, 25), lengthOfProgression);
+  const hiddenIndex = randomNum(0, lengthOfProgression);
+  const correctAnswer = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
 
-  const question = randomArray.join(' ');
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
 
