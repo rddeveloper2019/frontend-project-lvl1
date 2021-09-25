@@ -4,14 +4,14 @@ import game from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
 
-const generateResult = (int1, int2, operator) => {
-  const results = {
+const getResultByOperator = (int1, int2, operator) => {
+  const resultsByOperator = {
     '+': int1 + int2,
     '-': int1 - int2,
     '*': int1 * int2,
   };
 
-  return results[operator];
+  return resultsByOperator[operator];
 };
 
 const getGameConditions = () => {
@@ -20,7 +20,7 @@ const getGameConditions = () => {
   const operators = ['+', '-', '*'];
   const randomOperator = operators[randomNum(0, operators.length - 1)];
   const question = `${num1} ${randomOperator} ${num2}`;
-  const correctAnswer = generateResult(num1, num2, randomOperator);
+  const correctAnswer = getResultByOperator(num1, num2, randomOperator);
   return [question, correctAnswer];
 };
 
