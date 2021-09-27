@@ -6,12 +6,12 @@ const gameDescription = 'What is the result of the expression?';
 
 const getResultByOperator = (int1, int2, operator) => {
   const resultsByOperator = {
-    '+': int1 + int2,
-    '-': int1 - int2,
-    '*': int1 * int2,
+    '+': () => int1 + int2,
+    '-': () => int1 - int2,
+    '*': () => int1 * int2,
   };
 
-  return resultsByOperator[operator];
+  return resultsByOperator[operator]();
 };
 
 const getGameConditions = () => {

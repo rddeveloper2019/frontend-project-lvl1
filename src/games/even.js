@@ -6,10 +6,10 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 const isEven = (int) => int % 2 === 0;
 
 const getGameConditions = () => {
-  const askedNum = randomNum(10, 20);
-  const correctAnswer = isEven(askedNum) ? 'yes' : 'no';
+  const question = randomNum(10, 20);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
 
-  return [askedNum, correctAnswer];
+  return [question, correctAnswer];
 };
 
 const isEvenGame = () => {
