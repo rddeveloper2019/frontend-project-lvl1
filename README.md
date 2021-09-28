@@ -26,7 +26,7 @@
 
 
 ### Установка (требуется наличие Node.js, NPM, Git):
-
+not work
 [![asciicast](https://asciinema.org/a/RdIVy7EHmswEVGSIddDXrN5un.svg)](https://asciinema.org/a/RdIVy7EHmswEVGSIddDXrN5un)
 
 ### Пример игры:
