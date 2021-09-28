@@ -6,22 +6,27 @@ const game = (gameCondition, gameFunction) => {
   console.log(`Hello, ${userName}`);
   console.log(gameCondition);
 
-  for (let i = 3; i > 0; i -= 1) {
+  let gameLevel = 0;
+
+  while (gameLevel <= 3) {
+    if (gameLevel === 3) {
+      console.log(`Congratulations, ${userName}!`);
+      return;
+    }
+
     const [expression, correctAnswer] = gameFunction();
     const usersAnswer = question(`Question: ${expression} `);
     console.log(`Your answer: ${usersAnswer}`);
 
     if (usersAnswer === correctAnswer.toString()) {
       console.log('Correct!');
-      if (i === 1) {
-        console.log(`Congratulations, ${userName}!`);
-      }
+      gameLevel += 1;
     } else {
       console.log(
         `'${usersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${userName}!`);
-      i = 0;
+      return;
     }
   }
 };
