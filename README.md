@@ -37,7 +37,7 @@
 
 `$ sudo npm link`
 
-###Пример установки:
+Пример установки:
 
 [![asciicast](https://asciinema.org/a/SsOOR0HQsxnxS8UMeMEv8Z9r3.svg)](https://asciinema.org/a/SsOOR0HQsxnxS8UMeMEv8Z9r3)
 
