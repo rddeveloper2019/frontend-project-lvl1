@@ -25,15 +25,27 @@
  - Определение простого числа. (*brain-prime*)
 
 
-### Установка (требуется наличие Node.js, NPM, Git):
-not work
-[![asciicast](https://asciinema.org/a/RdIVy7EHmswEVGSIddDXrN5un.svg)](https://asciinema.org/a/RdIVy7EHmswEVGSIddDXrN5un)
+ Установка  игры требуется наличие  [Node.js  NPM](https://nodejs.org/en/),  [Git](https://git-scm.com/)
+ 
+ `$ git clone https://github.com/rddeveloper2019/frontend-project-lvl1.git`
+ 
+`$ cd frontend-project-lvl1`
+
+`$ npm i`
+
+`$ make publish`
+
+`$ sudo npm link`
+
+####Пример установки:
+
+[![asciicast](https://asciinema.org/a/SsOOR0HQsxnxS8UMeMEv8Z9r3.svg)](https://asciinema.org/a/SsOOR0HQsxnxS8UMeMEv8Z9r3)
 
 ### Пример игры:
 
  - Интро  `brain-games`:
 
-[![asciicast](https://asciinema.org/a/ba2aDukFqZgMFmS9nSz6WQwHZ.svg)](https://asciinema.org/a/ba2aDukFqZgMFmS9nSz6WQwHZ)
+[![asciicast](https://asciinema.org/a/vaagyOUPgNhkI0TKYqG9KoOki.svg)](https://asciinema.org/a/vaagyOUPgNhkI0TKYqG9KoOki)
 
  - Калькулятор  `brain-calc`:
 
