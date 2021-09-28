@@ -7,12 +7,7 @@ const game = (gameCondition, gameFunction) => {
 
   console.log(gameCondition);
 
-  for (let i = 0; i <= 3; i += 1) {
-    if (i === 3) {
-      console.log(`Congratulations, ${userName}!`);
-      return;
-    }
-
+  for (let i = 0; i < 3; i += 1) {
     const [expression, correctAnswer] = gameFunction();
     const usersAnswer = question(`Question: ${expression} `);
     console.log(`Your answer: ${usersAnswer}`);
@@ -27,6 +22,7 @@ const game = (gameCondition, gameFunction) => {
 
     console.log('Correct!');
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default game;
